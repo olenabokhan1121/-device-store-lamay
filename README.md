@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# Device Store | LAmAY
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive online store for browsing and purchasing gadgets. Explore smartphones, tablets, and accessories, view detailed product information, choose product variants, and manage your shopping cart and favourites.
 
-Currently, two official plugins are available:
+Live Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Visit Device Store](https://olenabokhan1121.github.io/-device-store-lamay/)
 
-## React Compiler
+Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React — building the user interface
+- TypeScript — static typing
+- Vite — development environment and build tool
+- Tailwind CSS — styling and responsive layouts
+- Zustand — state management
+- React Router — client-side routing
+- Base UI / shadcn — UI components
+- EmailJS — email functionality
 
-## Expanding the ESLint configuration
+Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Follow these steps to run the project locally.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  Clone the repository
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+bash
+git clone https://github.com/olenabokhan1121/-device-store-lamay.git
+cd ./-device-store-lamay
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+2. Install dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+3. Configure environment variables
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Create a `.env` file in the root directory of the project using `.env.example` as a template.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+Add the required environment variables:
+
+```env
+VITE_GADGETS_URL=your_gadgets_api_url
+VITE_EMAILJS_SERVICE_ID=your_emailjs_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 ```
+
+Replace the placeholder values with your actual configuration.
+
+4. Run the project locally
+
+bash
+npm run dev
+
+Open the local URL provided by Vite in your terminal.
+
+Features
+
+- Browse products by category.
+- View detailed product information.
+- Explore product image galleries.
+- Select available product colors and storage capacities.
+- Add products to the shopping cart.
+- Add and remove products from favourites.
+- View recommended and similar products.
+- Navigate between product variants without reloading the page.
+- Responsive layout for different screen sizes.
+- Contact page with team information and GitHub profiles.
