@@ -27,6 +27,8 @@ jobs:
 
       - name: Build the app
         run: npm run build
+        env:
+          VITE_GADGETS_URL: ${{ secrets.VITE_GADGETS_URL }}
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
